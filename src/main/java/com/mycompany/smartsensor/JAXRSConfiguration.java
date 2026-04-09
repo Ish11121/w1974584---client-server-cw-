@@ -13,4 +13,3 @@ public class JAXRSConfiguration extends Application {
 }
 
 
-test test 
