@@ -14,8 +14,12 @@
 
         <load-on-startup>1</load-on-startup>
     </servlet>
-
+    <servlet-mapping>
+        <servlet-name>SmartApp</servlet-name>
+        <url-pattern>/api/v1/*</url-pattern>
+    </servlet-mapping>
+kkkk
 </web-app>
 
-
+ 
 
