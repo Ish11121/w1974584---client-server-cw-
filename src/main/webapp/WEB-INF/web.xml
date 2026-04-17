@@ -18,7 +18,7 @@
         <servlet-name>SmartApp</servlet-name>
         <url-pattern>/api/v1/*</url-pattern>
     </servlet-mapping>
-kkkk
+    
 </web-app>
 
  
