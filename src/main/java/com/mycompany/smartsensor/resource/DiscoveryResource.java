@@ -15,6 +15,6 @@ public class DiscoveryResource {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public String getApiInfo() {
-        return "{ \"version\": \"version one\", \"contact\": \"admin@westminster.ac.uk\", \"resources\": { \"rooms\": \"/api/v1/rooms\", \"sensors\": \"/api/v1/sensors\" } }";
+        return "{ \"version\": \"version 1\", \"contact\": \"admin@westminster.ac.uk\", \"resources\": { \"rooms\": \"/api/v1/rooms\", \"sensors\": \"/api/v1/sensors\" } }";
     }
 }
