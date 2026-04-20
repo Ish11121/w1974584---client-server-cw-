@@ -4,6 +4,7 @@ package com.mycompany.smartsensor.resource;
 import com.mycompany.smartsensor.dao.MockDatabase;
 import com.mycompany.smartsensor.model.Room;
 import com.mycompany.smartsensor.model.Sensor;
+import java.util.ArrayList;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import java.util.List;
@@ -14,8 +15,22 @@ public class SensorResource {
     
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    public List<Sensor> getALLSensors() {
-        return MockDatabase.SENSORS;
+    public List<Sensor> getALLSensors(@QueryParam("type")String type) {
+        
+        if (type == null || type.isEmpty()){
+            return MockDatabase.SENSORS;
+        }
+        
+        List <Sensor> specificSensors = new ArrayList<>();
+        for (Sensor sensor : MockDatabase.SENSORS){
+            if (sensor.getType().equalsIgnoreCase(type)){
+                specificSensors.add(sensor);
+            }
+        
+        }
+        
+        return specificSensors;
+        
     
     }
     

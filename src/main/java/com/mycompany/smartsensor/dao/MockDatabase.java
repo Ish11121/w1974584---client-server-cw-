@@ -18,9 +18,9 @@ public class MockDatabase {
         ROOMS.add(new Room(3, "Room C", "Copland" ));
         
         
-        SENSORS.add(new Sensor(1, "Temp Sensor", 1));
-        SENSORS.add(new Sensor(2, "CO Sensor", 2));
-        SENSORS.add(new Sensor(3, "Smoke Sensor", 3));
+        SENSORS.add(new Sensor(1, "Temp Sensor", "Temperature", 1));
+        SENSORS.add(new Sensor(2, "CO Sensor", "CO2", 2));
+        SENSORS.add(new Sensor(3, "Smoke Sensor", "Smoke", 3));
 
 
         

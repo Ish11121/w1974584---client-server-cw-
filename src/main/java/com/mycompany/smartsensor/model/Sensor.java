@@ -1,26 +1,21 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package com.mycompany.smartsensor.model;
 
-/**
- *
- * @author ishmam
- */
+
 public class Sensor {
     
     private int sensorId;
     private String sensorName;
     private int roomId;
+    private String type;
     
     public Sensor() {}
     
-    public Sensor(int sensorId, String sensorName, int roomId) {
+    public Sensor(int sensorId, String sensorName, String type, int roomId) {
         this.sensorId = sensorId;
         this.sensorName = sensorName;
         this.roomId = roomId;
-        
+        this.type = type;
     }
     
     public int getSensorId() {
@@ -46,5 +41,13 @@ public class Sensor {
     public void setRoomId(int roomId) {
         this.roomId = roomId;
     }
+    
+    public String getType(){
+        return type;
+    }
+    
+    public void setType(String type) {
+        this.type = type;
+    } 
     
 }
