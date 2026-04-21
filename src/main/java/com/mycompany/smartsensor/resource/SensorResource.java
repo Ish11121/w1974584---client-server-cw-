@@ -91,9 +91,13 @@ public class SensorResource {
           
     }
     
+    @Path("/{sensorId}/readings")
+    public SensorReadingResource getSensorReadingResource(@PathParam("sensorId") int sensorId) {
+        return new SensorReadingResource(sensorId);
 }
-        
-        
-        
+    
+    }
     
     
+
+
