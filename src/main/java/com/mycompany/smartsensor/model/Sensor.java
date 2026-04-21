@@ -8,14 +8,16 @@ public class Sensor {
     private String sensorName;
     private int roomId;
     private String type;
+    private double currentValue;
     
     public Sensor() {}
     
-    public Sensor(int sensorId, String sensorName, String type, int roomId) {
+    public Sensor(int sensorId, String sensorName, String type, int roomId, double currentValue) {
         this.sensorId = sensorId;
         this.sensorName = sensorName;
         this.roomId = roomId;
         this.type = type;
+        this.currentValue = currentValue;
     }
     
     public int getSensorId() {
@@ -49,5 +51,15 @@ public class Sensor {
     public void setType(String type) {
         this.type = type;
     } 
+
+    public double getCurrentValue() {
+        return currentValue;
+    }
+
+    public void setCurrentValue(double currentValue) {
+        this.currentValue = currentValue;
+    }
+    
+    
     
 }
