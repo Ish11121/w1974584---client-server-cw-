@@ -9,15 +9,17 @@ public class Sensor {
     private int roomId;
     private String type;
     private double currentValue;
+    private String status;
     
     public Sensor() {}
     
-    public Sensor(int sensorId, String sensorName, String type, int roomId, double currentValue) {
+    public Sensor(int sensorId, String sensorName, String type, int roomId, double currentValue, String status) {
         this.sensorId = sensorId;
         this.sensorName = sensorName;
         this.roomId = roomId;
         this.type = type;
         this.currentValue = currentValue;
+        this.status = status;
     }
     
     public int getSensorId() {
@@ -59,6 +61,16 @@ public class Sensor {
     public void setCurrentValue(double currentValue) {
         this.currentValue = currentValue;
     }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+    
+    
     
     
     

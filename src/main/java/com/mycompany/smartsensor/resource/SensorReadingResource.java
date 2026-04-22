@@ -9,6 +9,7 @@ import java.util.List;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+import com.mycompany.smartsensor.exception.SensorUnavailableException;
 
 
 
@@ -66,6 +67,11 @@ public class SensorReadingResource {
             return Response.status(Response.Status.NOT_FOUND)
                     .entity("Sensor has not been found")
                     .build();
+        }
+        
+        if (foundSensor.getStatus().equalsIgnoreCase("Maintenance")){
+            throw new SensorUnavailableException("Sensor in maintenance and cannot accept new readings");
+        
         }
 
         int maxId = 0;

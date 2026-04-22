@@ -21,9 +21,9 @@ public class MockDatabase {
         ROOMS.add(new Room(3, "Room C", "Copland" ));
         
         
-        SENSORS.add(new Sensor(1, "Temp Sensor", "Temperature", 1, 64));
-        SENSORS.add(new Sensor(2, "CO Sensor", "CO2", 2, 65));
-        SENSORS.add(new Sensor(3, "Smoke Sensor", "Smoke", 3, 66));
+        SENSORS.add(new Sensor(1, "Temp Sensor", "Temperature", 1, 64,"Active"));
+        SENSORS.add(new Sensor(2, "CO Sensor", "CO2", 2, 65 ,"Maintenance"));
+        SENSORS.add(new Sensor(3, "Smoke Sensor", "Smoke", 3, 66 ,"Active"));
         
         READINGS.add(new SensorReading(1, 1, 67, "24/04/2026 @2am"));
         READINGS.add(new SensorReading(2, 1, 68, "24/04/2026 @4am"));
