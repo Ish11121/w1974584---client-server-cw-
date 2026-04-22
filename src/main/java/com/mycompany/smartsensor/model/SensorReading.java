@@ -7,15 +7,15 @@ public class SensorReading {
     private int readingId;
     private int sensorId;
     private double value;
-    private String TimeDate;
+    private String timestamp;
     
     public SensorReading() {}
          
-    public SensorReading(int readingId, int sensorId, double value, String TimeDate){
+    public SensorReading(int readingId, int sensorId, double value, String timestamp){
         this.readingId = readingId;
         this.sensorId = sensorId;
         this.value = value;
-        this.TimeDate = TimeDate;
+        this.timestamp = timestamp;
         
     
     }
@@ -44,12 +44,12 @@ public class SensorReading {
         this.value = value;
     }
 
-    public String getTimeDate() {
-        return TimeDate;
+    public String gettimestamp() {
+        return timestamp;
     }
 
-    public void setTimeDate(String TimeDate) {
-        this.TimeDate = TimeDate;
+    public void settimestamp(String timestamp) {
+        this.timestamp = timestamp;
     }
     
     

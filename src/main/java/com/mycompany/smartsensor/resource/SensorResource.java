@@ -9,6 +9,7 @@ import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import java.util.List;
 import javax.ws.rs.core.Response;
+import com.mycompany.smartsensor.exception.LinkedResourceNotFoundException;
 
 @Path("/sensors")
 public class SensorResource {
@@ -68,9 +69,7 @@ public class SensorResource {
         }
         
         if (findRoom == null){
-            return Response.status(Response.Status.BAD_REQUEST)
-                    .entity("Room no exist")
-                    .build();
+            throw new LinkedResourceNotFoundException("roomId does not exist");
         
         }
         
