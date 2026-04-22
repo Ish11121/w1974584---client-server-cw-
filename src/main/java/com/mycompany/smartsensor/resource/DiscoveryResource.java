@@ -11,6 +11,7 @@ import javax.ws.rs.core.MediaType;
 
 @Path("/")
 public class DiscoveryResource {
+    
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
