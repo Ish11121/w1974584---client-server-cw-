@@ -8,6 +8,7 @@ import javax.ws.rs.core.MediaType;
 import java.util.List;
 import javax.ws.rs.core.Response;
 import com.mycompany.smartsensor.model.Sensor;
+import com.mycompany.smartsensor.exception.RoomNotEmptyException;
 
 
 @Path("/rooms")
@@ -67,9 +68,7 @@ public class SensorRoomResource {
 
         for (Sensor sensor : MockDatabase.SENSORS) {
             if (sensor.getRoomId() == roomId) {
-                return Response.status(Response.Status.CONFLICT)
-                        .entity("Room cannot be deleted: Sensors are detected")
-                        .build();
+                throw new RoomNotEmptyException("Room is currently occupied by active hardware");
             }
         }
 
