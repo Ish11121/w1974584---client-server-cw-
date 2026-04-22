@@ -63,7 +63,7 @@ public class SensorRoomResource {
 
     @DELETE
     @Path("/{roomId}")
-    @Produces(MediaType.TEXT_PLAIN)
+    @Produces(MediaType.APPLICATION_JSON)
     public Response deleteRoom(@PathParam("roomId") int roomId) {
 
         for (Sensor sensor : MockDatabase.SENSORS) {
